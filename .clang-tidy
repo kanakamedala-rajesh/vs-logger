@@ -1,0 +1,18 @@
+Checks: >
+  -*,
+  bugprone-*,
+  cert-*,
+  cppcoreguidelines-*,
+  modernize-*,
+  performance-*,
+  readability-*
+
+WarningsAsErrors: [ 'bugprone-*', 'cert-*' ]
+
+HeaderFilterRegex: '^(include/vs/|src/|tests/|examples/).*$'
+
+CheckOptions:
+  - key: cppcoreguidelines-pro-type-member-init.NeedsToInitialize
+    value: 'Aggressively'
+  - key: modernize-use-equals-default.DefaultDeleteSeparately
+    value: 'true'
